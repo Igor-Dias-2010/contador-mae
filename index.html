@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador da Mãe</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div>
+        <h1>CONTADOR</h1>
+        <p id="resultado">0</p>
+        <button id="botao" onclick="menosum()">-1</button>
+        <button id="zerar" onclick="zerar()">Zerar</button>
+        <button id="botao" onclick="maisum()">+1</button>
+    </div>
+    <script>
+        let numero = 0
+        function menosum(){
+            numero -= 1
+            render()
+        }
+        function maisum(){
+            numero += 1
+            render()
+        }
+        function zerar(){
+            numero = 0
+            render()
+        }
+        function render(){
+            const p = document.querySelector("#resultado")
+            p.innerText = numero
+        }
+    </script>
+    
+</body>
+</html>
